@@ -4,13 +4,19 @@
     "bin": [
         "bin/brain-games"
     ],
-
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "authors": [
         {
             "name": "Nemial",
             "email": "nemtre@protonmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "v0.11.11"
+    },
     "keywords": ["study", "games"]
 }
