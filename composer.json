@@ -9,6 +9,9 @@
             "src/Cli.php"
         ]
     },
+    "scripts": {
+        "phpcs": "phpcs"
+    },
     "authors": [
         {
             "name": "Nemial",
@@ -17,6 +20,9 @@
     ],
     "require": {
         "wp-cli/php-cli-tools": "v0.11.11"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.5.4"
     },
     "keywords": ["study", "games"]
 }
