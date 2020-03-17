@@ -2,9 +2,10 @@
 
 namespace BrainGames\Cli;
 
+use BrainGames\Even;
+
 use function cli\line;
 use function cli\prompt;
-use BrainGames\Even;
 
 function run()
 {
