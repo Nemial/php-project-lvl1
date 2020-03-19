@@ -6,3 +6,6 @@
 
 ## Asciinema Playing Process
 [![Asciinema](https://asciinema.org/a/5sPFoloXIpztXgtizgjfYWq7u.png)](https://asciinema.org/a/5sPFoloXIpztXgtizgjfYWq7u)
+
+## Play in Brain Calc
+[![Asciinema](https://asciinema.org/a/A1wytZSQejae1GiEvlrJbg1Lb.png)](https://asciinema.org/a/A1wytZSQejae1GiEvlrJbg1Lb)
