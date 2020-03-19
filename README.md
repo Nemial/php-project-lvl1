@@ -4,8 +4,11 @@
 <img src="https://github.com/Nemial/php-project-lvl1/workflows/Brain%20Games/badge.svg?branch=master" alt="Brain Games">
 </p>
 
-## Asciinema Playing Process
+## Install BrainGames and Play in Brain Even
 [![Asciinema](https://asciinema.org/a/5sPFoloXIpztXgtizgjfYWq7u.png)](https://asciinema.org/a/5sPFoloXIpztXgtizgjfYWq7u)
 
 ## Play in Brain Calc
 [![Asciinema](https://asciinema.org/a/A1wytZSQejae1GiEvlrJbg1Lb.png)](https://asciinema.org/a/A1wytZSQejae1GiEvlrJbg1Lb)
+
+## Play in Brain GCD
+[![Asciinema](https://asciinema.org/a/Fv6k6GnqVmHj4q1540DRhfcUw.png)](https://asciinema.org/a/Fv6k6GnqVmHj4q1540DRhfcUw)
