@@ -7,7 +7,7 @@ use function BrainGames\GameEngine\engine;
 const DESCRIPTION = 'What is the result of the expression?';
 const GAME_NAME = 'Brain Calc';
 
-function start($name = 'Player')
+function start($name, $needWelcome = true)
 {
     $getAnswerAndQuestion = function () {
         $listOperation = ['*', '+', '-'];
@@ -20,7 +20,7 @@ function start($name = 'Player')
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name, $needWelcome);
 }
 
 function expressionResult($firstOperand, $secondOperand, $operation)
