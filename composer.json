@@ -21,6 +21,7 @@
             "email": "nemtre@protonmail.com"
         }
     ],
+    "license": "MIT",
     "require": {
         "wp-cli/php-cli-tools": "^v0.11.11"
     },
