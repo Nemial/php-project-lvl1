@@ -2,6 +2,8 @@
     "name": "nemial/brain-games",
     "description": "Brain Games",
     "bin": [
+        "bin/brain-games",
+        "bin/brain-calc",
         "bin/brain-even"
     ],
     "autoload": {
