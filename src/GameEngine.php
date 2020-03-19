@@ -1,20 +1,21 @@
 <?php
 
-namespace BrainGames\Even;
+namespace BrainGames\GameEngine;
 
 use function cli\line;
 use function cli\prompt;
 
 const LAP = 3;
 
-function run($name)
+function engine($description, $gameName, callable $getAnswerAndQuestion, $name)
 {
-    for ($i = 1; $i <= LAP; $i += 1) {
-        $randomNum = rand(0, 500);
-        line("Question: {$randomNum}");
-        $answer = prompt("Your answer: ");
-        $correctAnswer = isEven($randomNum) ? 'yes' : 'no';
+    line(PHP_EOL . "Welcome to {$gameName}");
+    line("{$description}" . PHP_EOL);
 
+    for ($i = 1; $i <= LAP; $i += 1) {
+        [$question, $correctAnswer] = $getAnswerAndQuestion();
+        line("Question: {$question}");
+        $answer = prompt("Your answer: ");
         if ($answer !== $correctAnswer) {
             line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.");
             line("Let's try again, {$name}!");
@@ -24,9 +25,4 @@ function run($name)
         }
     }
     line("Congratulations, {$name}!");
-}
-
-function isEven($num)
-{
-    return $num % 2 === 0;
 }
