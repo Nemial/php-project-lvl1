@@ -12,3 +12,6 @@
 
 ## Play in Brain GCD
 [![Asciinema](https://asciinema.org/a/Fv6k6GnqVmHj4q1540DRhfcUw.png)](https://asciinema.org/a/Fv6k6GnqVmHj4q1540DRhfcUw)
+
+## Play in Brain Progression
+[![Asciinema](https://asciinema.org/a/H9ITg9BSZcjzajAbyUWzaq355.png)](https://asciinema.org/a/H9ITg9BSZcjzajAbyUWzaq355)
