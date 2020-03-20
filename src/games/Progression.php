@@ -25,7 +25,7 @@ function start($name, $needWelcome = true)
 function generateProgression()
 {
     $startNum = rand(0, 512);
-    $step = rand(0, 4);
+    $step = rand(1, 4);
     $lengtProgression = 10;
     $progression = [];
 
