@@ -6,7 +6,6 @@ use BrainGames\Even;
 use BrainGames\Calc;
 use BrainGames\GCD;
 use BrainGames\Progression;
-use cli\Progress;
 
 use function cli\line;
 use function cli\prompt;
