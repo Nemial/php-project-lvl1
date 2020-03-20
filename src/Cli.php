@@ -5,6 +5,8 @@ namespace BrainGames\Cli;
 use BrainGames\Even;
 use BrainGames\Calc;
 use BrainGames\GCD;
+use BrainGames\Progression;
+use cli\Progress;
 
 use function cli\line;
 use function cli\prompt;
@@ -15,7 +17,8 @@ function run()
     $name = prompt("May I have your name?");
     line("Hello, {$name}");
     line("What game do you want to play, {$name}?" . PHP_EOL);
-    line("Brain Even - 1" . PHP_EOL . "Brain Calc - 2" . PHP_EOL . "Brain GCD - 3" . PHP_EOL);
+    line("Brain Even - 1" . PHP_EOL . "Brain Calc - 2");
+    line("Brain GCD - 3" . PHP_EOL . "Brain Progression - 4" . PHP_EOL);
     $games = prompt("Type Game Number: ");
     switch ($games) {
         case '1':
@@ -26,6 +29,9 @@ function run()
             break;
         case '3':
             GCD\start($name);
+            break;
+        case '4':
+            Progression\start($name);
             break;
         default:
             return 0;
@@ -47,6 +53,9 @@ function shortRun($description, $game)
             break;
         case '3':
             GCD\start($name, false);
+            break;
+        case '4':
+            Progression\start($name, false);
             break;
         default:
             return 0;
