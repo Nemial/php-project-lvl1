@@ -1,41 +1,47 @@
 {
     "name": "nemial/brain-games",
+    "type": "project",
     "description": "Brain Games",
-    "bin": [
-        "bin/brain-games",
-        "bin/brain-calc",
-        "bin/brain-even",
-        "bin/brain-gcd",
-        "bin/brain-progression"
+    "keywords": [
+        "study",
+        "games"
     ],
-    "autoload": {
-        "files": [
-            "src/Cli.php",
-            "src/games/Even.php",
-            "src/games/Calc.php",
-            "src/games/GCD.php",
-            "src/games/Progression.php",
-            "src/GameEngine.php"
-        ]
-    },
-    "scripts": {
-        "phpcs": "phpcs"
-    },
+    "homepage": "https://github.com/Nemial/php-project-lvl1",
+    "readme": "https://github.com/Nemial/php-project-lvl1/blob/master/README.md",
+    "license": "MIT",
     "authors": [
         {
             "name": "Nemial",
-            "email": "nemtre@protonmail.com"
+            "email": "nemtre@protonmail.com",
+            "role": "Developer"
         }
     ],
-    "license": "MIT",
     "require": {
         "wp-cli/php-cli-tools": "^v0.11.11"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.5.4"
     },
-    "keywords": [
-        "study",
-        "games"
+    "autoload": {
+        "files": [
+            "src/games/Even.php",
+            "src/games/Calc.php",
+            "src/games/GCD.php",
+            "src/games/Progression.php",
+            "src/games/Prime.php",
+            "src/Cli.php",
+            "src/GameEngine.php"
+        ]
+    },
+    "scripts": {
+        "phpcs": "phpcs"
+    },
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ]
 }

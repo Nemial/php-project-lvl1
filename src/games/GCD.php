@@ -24,10 +24,10 @@ function start($name, $needWelcome = true)
 function findGCD($firstNum, $secondNum)
 {
     $startNum = 1;
-    $maxNum = $firstNum > $secondNum ? $firstNum : $secondNum;
+    $minNum = $firstNum < $secondNum ? $firstNum : $secondNum;
     $listDivisors = [];
 
-    for ($i = 0; $i <= $maxNum / 2; $i += 1) {
+    for ($i = 0; $i <= $minNum; $i += 1) {
         $divisor = $startNum + $i;
         $firstResult = $firstNum % $divisor;
         $secondResult = $secondNum % $divisor;
