@@ -10,7 +10,7 @@ const GAME_NAME = 'Brain Prime';
 function start($name, $needWelcome = true)
 {
     $getAnswerAndQuestion = function () {
-        $num = 157;
+        $num = rand(0, 512);
         $question = "{$num}";
         $correctAnswer = isPrime($num) ? 'yes' : 'no';
 
