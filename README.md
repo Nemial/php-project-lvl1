@@ -15,3 +15,6 @@
 
 ## Play in Brain Progression
 [![Asciinema](https://asciinema.org/a/H9ITg9BSZcjzajAbyUWzaq355.png)](https://asciinema.org/a/H9ITg9BSZcjzajAbyUWzaq355)
+
+## Play in Brain Prime
+[![Asciinema](https://asciinema.org/a/gfgjVrpNLRXDaekxVwCxS3SPQ.png)](https://asciinema.org/a/gfgjVrpNLRXDaekxVwCxS3SPQ)
