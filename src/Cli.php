@@ -2,26 +2,22 @@
 
 namespace BrainGames\Cli;
 
-use BrainGames\Even;
-use BrainGames\Calc;
-use BrainGames\GCD;
-use BrainGames\Progression;
-use BrainGames\Prime;
+use BrainGames\Games\Even;
+use BrainGames\Games\Calc;
+use BrainGames\Games\GCD;
+use BrainGames\Games\Progression;
+use BrainGames\Games\Prime;
 
 use function cli\line;
 use function cli\prompt;
 
-function run()
+function run($description, $gameId)
 {
     line("Welcome to the Brain Games!");
+    line($description . PHP_EOL);
     $name = prompt("May I have your name?");
-    line("Hello, {$name}");
-    line("What game do you want to play, {$name}?" . PHP_EOL);
-    line("Brain Even - 1" . PHP_EOL . "Brain Calc - 2");
-    line("Brain GCD - 3" . PHP_EOL . "Brain Progression - 4");
-    line("Brain Prime - 5" . PHP_EOL);
-    $games = prompt("Type Game Number: ");
-    switch ($games) {
+    line("Hello, {$name}" . PHP_EOL);
+    switch ($gameId) {
         case '1':
             Even\start($name);
             break;
@@ -38,33 +34,6 @@ function run()
             Prime\start($name);
             break;
         default:
-            return 0;
-    }
-}
-
-function shortRun($description, $game)
-{
-    line("Welcome to the Brain Games!");
-    line($description . PHP_EOL);
-    $name = prompt("May I have your name?");
-    line("Hello, {$name}" . PHP_EOL);
-    switch ($game) {
-        case '1':
-            Even\start($name, false);
-            break;
-        case '2':
-            Calc\start($name, false);
-            break;
-        case '3':
-            GCD\start($name, false);
-            break;
-        case '4':
-            Progression\start($name, false);
-            break;
-        case '5':
-            Prime\start($name, false);
-            break;
-        default:
-            return 0;
+            return;
     }
 }

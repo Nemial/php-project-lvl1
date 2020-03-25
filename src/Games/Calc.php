@@ -1,13 +1,12 @@
 <?php
 
-namespace BrainGames\Calc;
+namespace BrainGames\Games\Calc;
 
 use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'What is the result of the expression?';
-const GAME_NAME = 'Brain Calc';
 
-function start($name, $needWelcome = true)
+function start($name)
 {
     $getAnswerAndQuestion = function () {
         $listOperation = ['*', '+', '-'];
@@ -20,7 +19,7 @@ function start($name, $needWelcome = true)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name, $needWelcome);
+    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
 }
 
 function expressionResult($firstOperand, $secondOperand, $operation)

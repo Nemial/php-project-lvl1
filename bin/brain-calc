@@ -7,7 +7,7 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use BrainGames\Calc;
-use function BrainGames\Cli\shortRun;
+use BrainGames\Games\Calc;
+use function BrainGames\Cli\run;
 
-shortRun(Calc\DESCRIPTION, 2);
+run(Calc\DESCRIPTION, 2);

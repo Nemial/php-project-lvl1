@@ -1,13 +1,12 @@
 <?php
 
-namespace BrainGames\Prime;
+namespace BrainGames\Games\Prime;
 
 use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const GAME_NAME = 'Brain Prime';
 
-function start($name, $needWelcome = true)
+function start($name)
 {
     $getAnswerAndQuestion = function () {
         $num = rand(0, 512);
@@ -17,7 +16,7 @@ function start($name, $needWelcome = true)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name, $needWelcome);
+    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
 }
 
 function isPrime($num)

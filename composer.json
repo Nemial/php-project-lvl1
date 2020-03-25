@@ -24,11 +24,11 @@
     },
     "autoload": {
         "files": [
-            "src/games/Even.php",
-            "src/games/Calc.php",
-            "src/games/GCD.php",
-            "src/games/Progression.php",
-            "src/games/Prime.php",
+            "src/Games/Even.php",
+            "src/Games/Calc.php",
+            "src/Games/GCD.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php",
             "src/Cli.php",
             "src/GameEngine.php"
         ]
@@ -37,7 +37,6 @@
         "phpcs": "phpcs"
     },
     "bin": [
-        "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",

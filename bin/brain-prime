@@ -7,7 +7,7 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use BrainGames\Prime;
-use function BrainGames\Cli\shortRun;
+use BrainGames\Games\Prime;
+use function BrainGames\Cli\run;
 
-shortRun(Prime\DESCRIPTION, 5);
+run(Prime\DESCRIPTION, 5);

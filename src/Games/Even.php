@@ -1,13 +1,12 @@
 <?php
 
-namespace BrainGames\Even;
+namespace BrainGames\Games\Even;
 
 use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = '"Answer "yes" if the number is even, otherwise answer "no"."';
-const GAME_NAME = 'Brain Even';
 
-function start($name, $needWelcome = true)
+function start($name)
 {
     $getAnswerAndQuestion = function () {
         $question = rand(0, 512);

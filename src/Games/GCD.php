@@ -1,13 +1,12 @@
 <?php
 
-namespace BrainGames\GCD;
+namespace BrainGames\Games\GCD;
 
 use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
-const GAME_NAME = 'Brain GCD';
 
-function start($name, $needWelcome = true)
+function start($name)
 {
     $getAnswerAndQuestion = function () {
         $firstNum = rand(0, 256);
@@ -18,7 +17,7 @@ function start($name, $needWelcome = true)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name, $needWelcome);
+    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
 }
 
 function findGCD($firstNum, $secondNum)

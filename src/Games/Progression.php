@@ -1,13 +1,12 @@
 <?php
 
-namespace BrainGames\Progression;
+namespace BrainGames\Games\Progression;
 
 use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'What number is missing in the progression?';
-const GAME_NAME = 'Brain Progression';
 
-function start($name, $needWelcome = true)
+function start($name)
 {
     $getAnswerAndQuestion = function () {
         $progression = generateProgression();
@@ -19,7 +18,7 @@ function start($name, $needWelcome = true)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name, $needWelcome);
+    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
 }
 
 function generateProgression()
