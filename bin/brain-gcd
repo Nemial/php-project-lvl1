@@ -10,4 +10,6 @@ if (file_exists($autoloadPath1)) {
 use BrainGames\Games\GCD;
 use function BrainGames\Cli\run;
 
-run(GCD\DESCRIPTION, 3);
+$name = run(GCD\DESCRIPTION);
+
+GCD\start($name);

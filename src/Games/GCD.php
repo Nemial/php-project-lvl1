@@ -17,7 +17,7 @@ function start($name)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
 }
 
 function findGCD($firstNum, $secondNum)

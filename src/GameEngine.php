@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const LAP = 3;
 
-function engine($description, $gameName, callable $getAnswerAndQuestion, $name)
+function engine($description, callable $getAnswerAndQuestion, $name)
 {
     for ($i = 1; $i <= LAP; $i += 1) {
         [$question, $correctAnswer] = $getAnswerAndQuestion();

@@ -10,4 +10,6 @@ if (file_exists($autoloadPath1)) {
 use BrainGames\Games\Even;
 use function BrainGames\Cli\run;
 
-run(Even\DESCRIPTION, 1);
+$name = run(Even\DESCRIPTION);
+
+Even\start($name);

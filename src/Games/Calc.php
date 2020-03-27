@@ -9,17 +9,17 @@ const DESCRIPTION = 'What is the result of the expression?';
 function start($name)
 {
     $getAnswerAndQuestion = function () {
-        $listOperation = ['*', '+', '-'];
+        $operations = ['*', '+', '-'];
         $firstOperand = rand(0, 256);
         $secondOperand = rand(0, 256);
-        $operation = $listOperation[array_rand($listOperation)];
+        $operation = $operations[array_rand($operations)];
         $question = "{$firstOperand} {$operation} {$secondOperand}";
         $correctAnswer = (string) expressionResult($firstOperand, $secondOperand, $operation);
 
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
 }
 
 function expressionResult($firstOperand, $secondOperand, $operation)
@@ -29,7 +29,7 @@ function expressionResult($firstOperand, $secondOperand, $operation)
             return $firstOperand + $secondOperand;
         case '-':
             return $firstOperand - $secondOperand;
-        default:
+        case '*':
             return $firstOperand * $secondOperand;
     }
 }

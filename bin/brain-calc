@@ -10,4 +10,6 @@ if (file_exists($autoloadPath1)) {
 use BrainGames\Games\Calc;
 use function BrainGames\Cli\run;
 
-run(Calc\DESCRIPTION, 2);
+$name = run(Calc\DESCRIPTION);
+
+Calc\start($name);

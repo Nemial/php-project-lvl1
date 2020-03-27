@@ -15,7 +15,7 @@ function start($name)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name, $needWelcome);
+    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
 }
 
 function isEven($num)

@@ -10,4 +10,6 @@ if (file_exists($autoloadPath1)) {
 use BrainGames\Games\Prime;
 use function BrainGames\Cli\run;
 
-run(Prime\DESCRIPTION, 5);
+$name = run(Prime\DESCRIPTION);
+
+Prime\start($name);

@@ -9,7 +9,9 @@ const DESCRIPTION = 'What number is missing in the progression?';
 function start($name)
 {
     $getAnswerAndQuestion = function () {
-        $progression = generateProgression();
+        $startNum = rand(0, 512);
+        $step = rand(1, 4);
+        $progression = generateProgression($startNum, $step);
         $hiddenItemIndex = array_rand($progression);
         $correctAnswer = (string) $progression[$hiddenItemIndex];
         $progression[$hiddenItemIndex] = "..";
@@ -18,13 +20,11 @@ function start($name)
         return [$question, $correctAnswer];
     };
 
-    engine(DESCRIPTION, GAME_NAME, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
 }
 
-function generateProgression()
+function generateProgression($startNum, $step)
 {
-    $startNum = rand(0, 512);
-    $step = rand(1, 4);
     $lengtProgression = 10;
     $progression = [];
 

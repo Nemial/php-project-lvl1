@@ -10,4 +10,6 @@ if (file_exists($autoloadPath1)) {
 use BrainGames\Games\Progression;
 use function BrainGames\Cli\run;
 
-run(Progression\DESCRIPTION, 4);
+$name = run(Progression\DESCRIPTION);
+
+Progression\start($name);
