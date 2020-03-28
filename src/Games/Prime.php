@@ -6,17 +6,17 @@ use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function start($name)
+function start()
 {
     $getAnswerAndQuestion = function () {
         $num = rand(0, 512);
         $question = "{$num}";
         $correctAnswer = isPrime($num) ? 'yes' : 'no';
 
-        return [$question, $correctAnswer];
+        return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function isPrime($num)

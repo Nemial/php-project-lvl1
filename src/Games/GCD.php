@@ -6,7 +6,7 @@ use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
-function start($name)
+function start()
 {
     $getAnswerAndQuestion = function () {
         $firstNum = rand(0, 256);
@@ -14,10 +14,10 @@ function start($name)
         $question = "{$firstNum} {$secondNum}";
         $correctAnswer = (string) findGCD($firstNum, $secondNum);
 
-        return [$question, $correctAnswer];
+        return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function findGCD($firstNum, $secondNum)

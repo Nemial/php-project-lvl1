@@ -6,29 +6,29 @@ use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function start($name)
+function start()
 {
     $getAnswerAndQuestion = function () {
+        $progressionLength = 10;
         $startNum = rand(0, 512);
         $step = rand(1, 4);
-        $progression = generateProgression($startNum, $step);
+        $progression = generateProgression($startNum, $step, $progressionLength);
         $hiddenItemIndex = array_rand($progression);
         $correctAnswer = (string) $progression[$hiddenItemIndex];
         $progression[$hiddenItemIndex] = "..";
         $question = implode(' ', $progression);
 
-        return [$question, $correctAnswer];
+        return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion);
 }
 
-function generateProgression($startNum, $step)
+function generateProgression($startNum, $step, $progressionLength)
 {
-    $lengtProgression = 10;
     $progression = [];
 
-    for ($i = 0; $i < $lengtProgression; $i += 1) {
+    for ($i = 0; $i < $progressionLength; $i += 1) {
         $progression[$i] = $startNum + $step * $i;
     }
 

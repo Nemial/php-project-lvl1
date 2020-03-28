@@ -7,10 +7,15 @@ use function cli\prompt;
 
 const LAP = 3;
 
-function engine($description, callable $getAnswerAndQuestion, $name)
+function engine($description, callable $getAnswerAndQuestion)
 {
+    line("Welcome to the Brain Games!");
+    line($description . PHP_EOL);
+    $name = prompt("May I have your name?");
+    line("Hello, {$name}" . PHP_EOL);
+
     for ($i = 1; $i <= LAP; $i += 1) {
-        [$question, $correctAnswer] = $getAnswerAndQuestion();
+        [$correctAnswer, $question] = $getAnswerAndQuestion();
         line("Question: {$question}");
         $answer = prompt("Your answer: ");
         if ($answer !== $correctAnswer) {

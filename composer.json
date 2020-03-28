@@ -29,7 +29,6 @@
             "src/Games/GCD.php",
             "src/Games/Progression.php",
             "src/Games/Prime.php",
-            "src/Cli.php",
             "src/GameEngine.php"
         ]
     },

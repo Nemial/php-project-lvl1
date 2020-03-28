@@ -7,9 +7,6 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use BrainGames\Games\Progression;
-use function BrainGames\Cli\run;
+use function BrainGames\Games\Progression\start;
 
-$name = run(Progression\DESCRIPTION);
-
-Progression\start($name);
+start();

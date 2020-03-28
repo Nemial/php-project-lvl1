@@ -6,16 +6,16 @@ use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = '"Answer "yes" if the number is even, otherwise answer "no"."';
 
-function start($name)
+function start()
 {
     $getAnswerAndQuestion = function () {
         $question = rand(0, 512);
         $correctAnswer = isEven($question) ? 'yes' : 'no';
 
-        return [$question, $correctAnswer];
+        return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function isEven($num)

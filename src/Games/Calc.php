@@ -6,7 +6,7 @@ use function BrainGames\GameEngine\engine;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function start($name)
+function start()
 {
     $getAnswerAndQuestion = function () {
         $operations = ['*', '+', '-'];
@@ -16,10 +16,10 @@ function start($name)
         $question = "{$firstOperand} {$operation} {$secondOperand}";
         $correctAnswer = (string) expressionResult($firstOperand, $secondOperand, $operation);
 
-        return [$question, $correctAnswer];
+        return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion, $name);
+    engine(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function expressionResult($firstOperand, $secondOperand, $operation)

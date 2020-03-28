@@ -7,9 +7,6 @@ if (file_exists($autoloadPath1)) {
 } else {
     require_once $autoloadPath2;
 }
-use BrainGames\Games\Calc;
-use function BrainGames\Cli\run;
+use function BrainGames\Games\Calc\start;
 
-$name = run(Calc\DESCRIPTION);
-
-Calc\start($name);
+start();
