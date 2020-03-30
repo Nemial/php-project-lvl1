@@ -7,7 +7,7 @@ use function cli\prompt;
 
 const LAP = 3;
 
-function engine($description, callable $getAnswerAndQuestion)
+function runGame($description, callable $getAnswerAndQuestion)
 {
     line("Welcome to the Brain Games!");
     line($description . PHP_EOL);

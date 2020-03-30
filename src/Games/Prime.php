@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\GameEngine\engine;
+use function BrainGames\GameEngine\runGame;
 
 const DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -16,7 +16,7 @@ function start()
         return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion);
+    runGame(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function isPrime($num)

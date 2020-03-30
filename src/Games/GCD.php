@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\GCD;
 
-use function BrainGames\GameEngine\engine;
+use function BrainGames\GameEngine\runGame;
 
 const DESCRIPTION = 'Find the greatest common divisor of given numbers.';
 
@@ -17,23 +17,22 @@ function start()
         return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion);
+    runGame(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function findGCD($firstNum, $secondNum)
 {
     $startNum = 1;
     $minNum = $firstNum < $secondNum ? $firstNum : $secondNum;
-    $listDivisors = [];
+    $divisors = [];
 
-    for ($i = 0; $i <= $minNum; $i += 1) {
-        $divisor = $startNum + $i;
+    for ($i = 0, $divisor = 1; $i <= $minNum; $i += 1, $divisor += 1) {
         $firstResult = $firstNum % $divisor;
         $secondResult = $secondNum % $divisor;
         if ($firstResult === 0 && $secondResult === 0) {
-            $listDivisors[] = $divisor;
+            $divisors[] = $divisor;
         }
     }
 
-    return max($listDivisors);
+    return max($divisors);
 }

@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\GameEngine\engine;
+use function BrainGames\GameEngine\runGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
@@ -21,7 +21,7 @@ function start()
         return [$correctAnswer, $question];
     };
 
-    engine(DESCRIPTION, $getAnswerAndQuestion);
+    runGame(DESCRIPTION, $getAnswerAndQuestion);
 }
 
 function generateProgression($startNum, $step, $progressionLength)
