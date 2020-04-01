@@ -1,6 +1,6 @@
 # Brain Games
 [![Codeclimate](https://api.codeclimate.com/v1/badges/4f8e899a07d5838e2e3c/maintainability)](https://codeclimate.com/github/Nemial/php-project-lvl1/maintainability)
-[![Workflows](https://github.com/Nemial/php-project-lvl1/workflows/Brain%20Games/badge.svg?branch=master)]
+![Workflows](https://github.com/Nemial/php-project-lvl1/workflows/Brain%20Games/badge.svg?branch=master)
 
 ## About the project
 Brain Games are mini games for brain development.
