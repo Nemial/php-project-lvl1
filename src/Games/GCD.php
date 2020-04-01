@@ -22,7 +22,6 @@ function start()
 
 function findGCD($firstNum, $secondNum)
 {
-    $startNum = 1;
     $minNum = $firstNum < $secondNum ? $firstNum : $secondNum;
     $divisors = [];
 
