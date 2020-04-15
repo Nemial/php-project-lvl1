@@ -12,7 +12,7 @@ function start()
         $firstNum = rand(0, 256);
         $secondNum = rand(0, 256);
         $question = "{$firstNum} {$secondNum}";
-        $correctAnswer = (string) findGCD($firstNum, $secondNum);
+        $correctAnswer = (string)findGCD($firstNum, $secondNum);
 
         return [$correctAnswer, $question];
     };

@@ -14,7 +14,7 @@ function start()
         $secondOperand = rand(0, 256);
         $operation = $operations[array_rand($operations)];
         $question = "{$firstOperand} {$operation} {$secondOperand}";
-        $correctAnswer = (string) getExpressionResult($firstOperand, $secondOperand, $operation);
+        $correctAnswer = (string)getExpressionResult($firstOperand, $secondOperand, $operation);
 
         return [$correctAnswer, $question];
     };

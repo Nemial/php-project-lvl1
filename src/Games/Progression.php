@@ -14,7 +14,7 @@ function start()
         $step = rand(1, 4);
         $progression = generateProgression($startNum, $step, $progressionLength);
         $hiddenItemIndex = array_rand($progression);
-        $correctAnswer = (string) $progression[$hiddenItemIndex];
+        $correctAnswer = (string)$progression[$hiddenItemIndex];
         $progression[$hiddenItemIndex] = "..";
         $question = implode(' ', $progression);
 
