@@ -1,45 +1,45 @@
 {
-  "name": "nemial/brain-games",
-  "type": "project",
-  "description": "Brain Games",
-  "keywords": [
-    "study",
-    "games"
-  ],
-  "homepage": "https://github.com/Nemial/php-project-lvl1",
-  "readme": "https://github.com/Nemial/php-project-lvl1/blob/master/README.md",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Nemial",
-      "email": "nemtre@protonmail.com",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "wp-cli/php-cli-tools": "^v0.11.11"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "^3.5.4"
-  },
-  "autoload": {
-    "files": [
-      "src/Games/Even.php",
-      "src/Games/Calc.php",
-      "src/Games/GCD.php",
-      "src/Games/Progression.php",
-      "src/Games/Prime.php",
-      "src/GameEngine.php"
-    ]
-  },
-  "scripts": {
-    "phpcs": "phpcs"
-  },
-  "bin": [
-    "bin/brain-even",
-    "bin/brain-calc",
-    "bin/brain-gcd",
-    "bin/brain-progression",
-    "bin/brain-prime"
-  ]
+    "authors": [
+        {
+            "name": "Nemial",
+            "email": "nemtre@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/Games/Even.php",
+            "src/Games/Calc.php",
+            "src/Games/GCD.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php",
+            "src/GameEngine.php"
+        ]
+    },
+    "bin": [
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
+    ],
+    "description": "Brain Games",
+    "homepage": "https://github.com/Nemial/php-project-lvl1",
+    "keywords": [
+        "study",
+        "games"
+    ],
+    "license": "MIT",
+    "name": "nemial/brain-games",
+    "readme": "https://github.com/Nemial/php-project-lvl1/blob/master/README.md",
+    "require": {
+        "wp-cli/php-cli-tools": "^v0.11.11"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "scripts": {
+        "phpcs": "phpcs"
+    },
+    "type": "project"
 }
