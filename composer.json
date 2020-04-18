@@ -8,26 +8,28 @@
     ],
     "autoload": {
         "files": [
-            "src/Games/Even.php",
+            "src/GameEngine.php",
+            "src/GameMenu.php",
             "src/Games/Calc.php",
+            "src/Games/Even.php",
             "src/Games/GCD.php",
-            "src/Games/Progression.php",
             "src/Games/Prime.php",
-            "src/GameEngine.php"
+            "src/Games/Progression.php"
         ]
     },
     "bin": [
-        "bin/brain-even",
         "bin/brain-calc",
+        "bin/brain-even",
+        "bin/brain-games",
         "bin/brain-gcd",
-        "bin/brain-progression",
-        "bin/brain-prime"
+        "bin/brain-prime",
+        "bin/brain-progression"
     ],
     "description": "Brain Games",
     "homepage": "https://github.com/Nemial/php-project-lvl1",
     "keywords": [
-        "study",
-        "games"
+        "games",
+        "study"
     ],
     "license": "MIT",
     "name": "nemial/brain-games",

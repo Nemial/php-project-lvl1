@@ -5,12 +5,17 @@
 ## About the project
 Brain Games are mini games for brain development.
 
-## Installation and run game
+## Installation
 ``` composer global require nemial\brain-games ```
 
-In order to run the game, enter its name in the terminal.
+## Run Games
+To get started launch the game menu and select the desired game
 
-``` brain-even ```
+``` brain-games```
+
+Or just launch the game by specifying its name, for example
+
+``` brain-calc```
 
 ### Install BrainGames and Play in Brain Even
 [![Asciinema](https://asciinema.org/a/5sPFoloXIpztXgtizgjfYWq7u.png)](https://asciinema.org/a/5sPFoloXIpztXgtizgjfYWq7u)

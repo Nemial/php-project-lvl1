@@ -7,9 +7,9 @@ use function cli\prompt;
 
 const LAP_COUNT = 3;
 
-function runGame($description, callable $getAnswerAndQuestion)
+function runGame($gameName, $description, callable $getAnswerAndQuestion)
 {
-    line("Welcome to the Brain Games!");
+    line("Welcome to the {$gameName}!");
     line($description . PHP_EOL);
     $name = prompt("May I have your name?");
     line("Hello, {$name}" . PHP_EOL);
