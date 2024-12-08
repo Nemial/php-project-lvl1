@@ -7,12 +7,13 @@ use BrainGames\Games\{Calc, Even, GCD, Prime, Progression};
 use function cli\line;
 use function cli\prompt;
 
-function startMenu()
+function startMenu(): void
 {
     line("Welcome to the Brain Games!" . PHP_EOL);
     line("1 - Brain Calc\t2 - Brain Even");
     line("3 - Brain GCD\t4 - Brain Prime");
     line("5 - Brain Progression" . PHP_EOL);
+
     $game = prompt("What game do you want to play");
     line();
     switch ($game) {

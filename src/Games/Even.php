@@ -7,7 +7,7 @@ use function BrainGames\GameEngine\runGame;
 const GAME_NAME = "Brain Even";
 const DESCRIPTION = '"Answer "yes" if the number is even, otherwise answer "no"."';
 
-function start()
+function start(): void
 {
     $getAnswerAndQuestion = function () {
         $question = rand(0, 512);
@@ -19,7 +19,7 @@ function start()
     runGame(GAME_NAME, DESCRIPTION, $getAnswerAndQuestion);
 }
 
-function isEven($num)
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }
